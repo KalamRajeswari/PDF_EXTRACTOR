@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extraction Results</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; padding: 20px; }
+        pre {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            white-space: pre-wrap;
+            text-align: left;
+        }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <h2>{{ result }}</h2>
+    {% if output_text %}
+    <pre>{{ output_text }}</pre>
+    {% endif %}
+    <a href="/">⬅ Back</a>
+</body>
+</html>

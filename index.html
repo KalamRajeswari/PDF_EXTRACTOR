@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Folder Extractor</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; text-align: center; }
+        .container { background: white; padding: 30px; width: 50%; margin: 50px auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        input, textarea { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📂 Dynamic PDF Folder Extractor</h2>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <textarea name="persona" placeholder="Enter persona (e.g., Travel Planner)" required></textarea><br>
+            <textarea name="job_to_be_done" placeholder="Enter job to be done (e.g., Plan a 4-day trip for 10 friends)" required></textarea><br>
+            <input type="text" name="folder_name" placeholder="Enter folder name inside static (e.g., pdfs)" required><br>
+            <button type="submit">Generate Notes</button>
+        </form>
+    </div>
+</body>
+</html>
